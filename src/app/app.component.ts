@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Circle, Rectangle, Triangle } from './classes/Figures.Class';
+import toInteger from 'lodash/toInteger';
 
 @Component({
   selector: 'app-root',
@@ -63,5 +64,13 @@ export class AppComponent {
       }
     }
     return figureData;
+  }
+
+  public areaSum() {
+    let sum = 0;
+    for (const figure of this.generatedFigures) {
+      sum = sum + toInteger(this.getArea(figure));
+    }
+    return sum;
   }
 }

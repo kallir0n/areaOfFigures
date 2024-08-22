@@ -7,7 +7,9 @@
             </ul>
         </div>
     </ng-container>
-    
+    <div *ngIf="generatedFigures.length > 0">
+        <span>Суммарная площадь фигур {{areaSum()}} попугаев</span>
+    </div>
     <div>
         <span class="bold" (click)="generateFigures(20)">Сгенерировать фигуры</span>
     </div>
