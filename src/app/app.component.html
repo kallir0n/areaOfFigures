@@ -1,0 +1,16 @@
+<div>
+    <ng-container *ngFor="let figure of generatedFigures; let idx = index">
+        <div class="row border p-2 mb-20">
+            <ul>
+            <div contenteditable="false" >{{ getWhoami(figure) }}</div>
+            <div contenteditable="false" > Площадь фигуры {{ getArea(figure) }}</div>
+            </ul>
+        </div>
+    </ng-container>
+    
+    <div>
+        <span class="bold" (click)="generateFigures(20)">Сгенерировать фигуры</span>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
