@@ -2,7 +2,8 @@
     <ng-container *ngFor="let figure of generatedFigures; let idx = index">
         <div class="row border p-2 mb-20">
             <ul>
-            <div contenteditable="false" >{{ getWhoami(figure) }}</div>
+            <div contenteditable="false" >Name: {{ getWhoAmI(figure) }}</div>
+            <div contenteditable="false" >Id: {{ getId(figure) }}</div>
             <div contenteditable="false" > Площадь фигуры {{ getArea(figure) }}</div>
             </ul>
         </div>
